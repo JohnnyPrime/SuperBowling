@@ -14,27 +14,27 @@
         <h1>Super Bowling!</h1>
         <table class="card">
             <tr class="rolls">
-                <td align="center">{{score}}</td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
-                <td align="center"></td>
+                <td align="center">{{aScore[0]}}</td>
+                <td align="center">{{aScore[1]}}</td>
+                <td align="center">{{aScore[2]}}</td>
+                <td align="center">{{aScore[3]}}</td>
+                <td align="center">{{aScore[4]}}</td>
+                <td align="center">{{aScore[5]}}</td>
+                <td align="center">{{aScore[6]}}</td>
+                <td align="center">{{aScore[7]}}</td>
+                <td align="center">{{aScore[8]}}</td>
+                <td align="center">{{aScore[9]}}</td>
+                <td align="center">{{aScore[10]}}</td>
+                <td align="center">{{aScore[11]}}</td>
+                <td align="center">{{aScore[12]}}</td>
+                <td align="center">{{aScore[13]}}</td>
+                <td align="center">{{aScore[14]}}</td>
+                <td align="center">{{aScore[15]}}</td>
+                <td align="center">{{aScore[16]}}</td>
+                <td align="center">{{aScore[17]}}</td>
+                <td align="center">{{aScore[18]}}</td>
+                <td align="center">{{aScore[19]}}</td>
+                <td align="center">{{aScore[20]}}</td>
             </tr>
             <tr class="score">
                 <td align="center" colspan="2"></td>
@@ -52,18 +52,18 @@
     </div>
 
     <div id="buttons">
-        <form ng-submit="scoreAdd()">
+        <form ng-submit="rollAdd()">
             <button type="submit" ng-click="sub = 0">Nooooo!</button>
-            <button>One</button>
-            <button>Two</button>
-            <button>Three</button>
-            <button>Four</button>
-            <button>Five</button>
-            <button>Six</button>
-            <button>Seven</button>
-            <button>Eight</button>
-            <button>Nine</button>
-            <button>Tacos!</button>
+            <button type="submit" ng-click="sub = 1">One</button>
+            <button type="submit" ng-click="sub = 2">Two</button>
+            <button type="submit" ng-click="sub = 3">Three</button>
+            <button type="submit" ng-click="sub = 4">Four</button>
+            <button type="submit" ng-click="sub = 5">Five</button>
+            <button type="submit" ng-click="sub = 6">Six</button>
+            <button type="submit" ng-click="sub = 7">Seven</button>
+            <button type="submit" ng-click="sub = 8">Eight</button>
+            <button type="submit" ng-click="sub = 9">Nine</button>
+            <button type="submit" ng-click="sub = 10">Tacos!</button>
         </form>
     </div>
 
