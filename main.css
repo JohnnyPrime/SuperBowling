@@ -1,18 +1,18 @@
 table,
 tr,
 td {
-    border: 2px solid darkred;
     /*
     border-width: 2px;
-    border-color: darkred;
-    border-style: solid;
+    border-color: darkred;border-style: solid;
 */
 }
 
-.score.td {
-    border-width: 100px;
+table {
+    border: 5px solid black;
 }
 
 td {
-    width: 50px;
+    border: 2px solid black;
+    width: 24px;
+    height: 24px;
 }
