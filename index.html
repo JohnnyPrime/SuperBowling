@@ -5,81 +5,67 @@
 <head>
     <title>Super Bowling!</title>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="script.js"></script>
 </head>
 
-<body>
-    <h1>Super Bowling!</h1>
-    <table class="card">
-        <tr class="rolls">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr class="score">
-            <td colspan="2"></td>
-            <td colspan="2"></td>
-            <td colspan="2"></td>
-            <td colspan="2"></td>
-            <td colspan="2"></td>
-            <td colspan="2"></td>
-            <td colspan="2"></td>
-            <td colspan="2"></td>
-            <td colspan="2"></td>
-            <td colspan="3"></td>
-        </tr>
-    </table>
-    <table>
-        <tr class="pinSelector">
-            <td colspan="2">
-                <button>1 Pin</button>
-            </td>
-            <td colspan="2">
-                <button>2 Pin</button>
-            </td>
-            <td colspan="2">
-                <button>3 Pin</button>
-            </td>
-            <td colspan="2">
-                <button>4 Pin</button>
-            </td>
-            <td colspan="2">
-                <button>5 Pin</button>
-            </td>
-            <td colspan="2">
-                <button>6 Pin</button>
-            </td>
-            <td colspan="2">
-                <button>7 Pin</button>
-            </td>
-            <td colspan="2">
-                <button>8 Pin</button>
-            </td>
-            <td colspan="2">
-                <button>9 Pin</button>
-            </td>
-            <td colspan="3">
-                <button>10 Pin</button>
-            </td>
-        </tr>
-    </table>
+<body ng-app="bowlApp" ng-controller="bowlController as bowlCtrl">
+    <div id="mainContent">
+        <h1>Super Bowling!</h1>
+        <table class="card">
+            <tr class="rolls">
+                <td align="center">{{score}}</td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+            </tr>
+            <tr class="score">
+                <td align="center" colspan="2"></td>
+                <td align="center" colspan="2"></td>
+                <td align="center" colspan="2"></td>
+                <td align="center" colspan="2"></td>
+                <td align="center" colspan="2"></td>
+                <td align="center" colspan="2"></td>
+                <td align="center" colspan="2"></td>
+                <td align="center" colspan="2"></td>
+                <td align="center" colspan="2"></td>
+                <td align="center" colspan="3"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="buttons">
+        <form ng-submit="scoreAdd()">
+            <button type="submit" ng-click="sub = 0">Nooooo!</button>
+            <button>One</button>
+            <button>Two</button>
+            <button>Three</button>
+            <button>Four</button>
+            <button>Five</button>
+            <button>Six</button>
+            <button>Seven</button>
+            <button>Eight</button>
+            <button>Nine</button>
+            <button>Tacos!</button>
+        </form>
+    </div>
 
 </body>
 
