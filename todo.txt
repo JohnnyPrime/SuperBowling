@@ -1,0 +1,5 @@
+
+pretty up table in css
+ui to enter pins knocked down per roll
+1-10 selector with logic for next available roll
+polygonal pins
