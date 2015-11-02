@@ -4,18 +4,17 @@ var app = angular.module('bowlApp', []);
 
 app.controller('bowlController', ['$scope', function ($scope) {
 
-    $scope.score = 0;
-
-    $scope.sub = 0;
-    $scope.aScore = [];
+    $scope.numUserSubmission = 0;
+    $scope.arrScore = [];
+    $scope.arrScore.length = 21;
+    var numRoll = 0;
 
     $scope.rollAdd = function () {
-        if ($scope.aScore.length < 21) {
-
-            $scope.aScore.push($scope.sub);
+        if (!$scope.arrScore[numRoll] && numRoll < 21) {
+            $scope.arrScore[numRoll] = $scope.numUserSubmission;
             console.log("Pressed a button.");
         }
-
+        numRoll++;
     };
 
 }]);
