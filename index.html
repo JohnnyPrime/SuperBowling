@@ -14,36 +14,27 @@
         <h1>Super Bowling!</h1>
         <table class="card">
             <tr class="rolls">
-                <td align="center" ng-repeat="score in arrScore track by $index">{{score}}</td>
+                <td align="center" ng-repeat="score in superBowl.arrScore track by $index">{{score}}</td>
             </tr>
             <tr class="score">
-                <td align="center" colspan="2"></td>
-                <td align="center" colspan="2"></td>
-                <td align="center" colspan="2"></td>
-                <td align="center" colspan="2"></td>
-                <td align="center" colspan="2"></td>
-                <td align="center" colspan="2"></td>
-                <td align="center" colspan="2"></td>
-                <td align="center" colspan="2"></td>
-                <td align="center" colspan="2"></td>
-                <td align="center" colspan="3"></td>
+                <td align="center" ng-repeat="frames in superBowl.arrFrames track by $index" colspan="{{$last ? superBowl.rollsLastFrame : superBowl.rollsPerFrame}}"></td>
             </tr>
         </table>
     </div>
 
     <div id="buttons">
-        <form ng-submit="rollAdd()">
-            <button type="submit" ng-click="numUserSubmission = 0">Nooooo!</button>
-            <button type="submit" ng-click="numUserSubmission = 1">One</button>
-            <button type="submit" ng-click="numUserSubmission = 2">Two</button>
-            <button type="submit" ng-click="numUserSubmission = 3">Three</button>
-            <button type="submit" ng-click="numUserSubmission = 4">Four</button>
-            <button type="submit" ng-click="numUserSubmission = 5">Five</button>
-            <button type="submit" ng-click="numUserSubmission = 6">Six</button>
-            <button type="submit" ng-click="numUserSubmission = 7">Seven</button>
-            <button type="submit" ng-click="numUserSubmission = 8">Eight</button>
-            <button type="submit" ng-click="numUserSubmission = 9">Nine</button>
-            <button type="submit" ng-click="numUserSubmission = 10">Tacos!</button>
+        <form ng-submit="superBowl.rollAdd()">
+            <button type="submit" ng-click="superBowl.numUserSubmission = 0">Nooooo!</button>
+            <button type="submit" ng-click="superBowl.numUserSubmission = 1">One</button>
+            <button type="submit" ng-click="superBowl.numUserSubmission = 2">Two</button>
+            <button type="submit" ng-click="superBowl.numUserSubmission = 3">Three</button>
+            <button type="submit" ng-click="superBowl.numUserSubmission = 4">Four</button>
+            <button type="submit" ng-click="superBowl.numUserSubmission = 5">Five</button>
+            <button type="submit" ng-click="superBowl.numUserSubmission = 6">Six</button>
+            <button type="submit" ng-click="superBowl.numUserSubmission = 7">Seven</button>
+            <button type="submit" ng-click="superBowl.numUserSubmission = 8">Eight</button>
+            <button type="submit" ng-click="superBowl.numUserSubmission = 9">Nine</button>
+            <button type="submit" ng-click="superBowl.numUserSubmission = 10">Tacos!</button>
         </form>
     </div>
 

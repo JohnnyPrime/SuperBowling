@@ -1,20 +1,32 @@
-/*globals angular */
+/*globals angular, console */
 
 var app = angular.module('bowlApp', []);
 
 app.controller('bowlController', ['$scope', function ($scope) {
 
-    $scope.numUserSubmission = 0;
-    $scope.arrScore = [];
-    $scope.arrScore.length = 21;
-    var numRoll = 0;
+    var frames = 10,
+        pins = 10,
+        rolls = 21;
 
-    $scope.rollAdd = function () {
-        if (!$scope.arrScore[numRoll] && numRoll < 21) {
-            $scope.arrScore[numRoll] = $scope.numUserSubmission;
-            console.log("Pressed a button.");
+    $scope.superBowl = {
+        numRoll: 0,
+        numUserSubmission: 0,
+        arrScore: [],
+        arrFrames: [],
+        rollsPerFrame: 2,
+        rollsLastFrame: 3,
+
+        rollAdd: function () {
+            if (!this.arrScore[this.numRoll] && this.numRoll < 21) {
+                this.arrScore[this.numRoll] = this.numUserSubmission;
+                console.log("Pressed a button.");
+            }
+            this.numRoll++;
         }
-        numRoll++;
     };
+
+    $scope.superBowl.arrFrames.length = frames;
+    $scope.superBowl.arrScore.length = rolls;
+
 
 }]);
