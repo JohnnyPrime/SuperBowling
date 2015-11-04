@@ -1,0 +1,17 @@
+choose number of players
+name players
+randomize player order
+save roll into array
+function to turn array into player object
+function to calculate frame
+function to calculate score
+
+model
+to represent the current state of your application
+
+view 
+to disply the data
+
+controller
+that controls the relation between models and views
+
