@@ -17,8 +17,7 @@ that controls the relation between models and views
 
 TDD:
 
-create world - holds everything
-create game - tells palyers what to do
+create world - tells palyers what to do
 create player - tells ball what to do
 create ball - tells lane what to do
 create lane - tells scorecard what to do
@@ -27,34 +26,36 @@ create scorecard - tells website what to do
 world = {
 
 nPlayers: user input
+startAt = player 0
 
-world = function(){
-    for each player create
-        player object
-            name = user input
-            ball color = user selector
-            blank scorecard = 10 frames
-            
-        shuffle player order
-        start game
+createGame = function(){
+for each player create
+    player object
+        name
+        ball color
+        blank scorecard
+    shuffle player order
+    start game
 }
 
-startGame = function(){
+gameGo = function(){
 
-    choose next player = function
+choose next player = function
 
-    turn function (roll until scorecard says stop)
-        alert player it's their turn = function
-        ask for command = function
-        update state of the lane = function
-        calculate score = function
-        advance roll = function
-        repeat
-        end frame/turn = alert player
-    if not the end of game
+function turn (roll until scorecard says stop)
+    alert player it's their turn = function
+    ask for command = function
+    update state of the lane = function
+    calculate score = function
+    advance roll = function
     repeat
+    end frame/turn = alert player
+if not the end of game
+repeat
 
     }
+
+players: [{id:1}, {id:2}]
 
 function(turns){
     set players x to active player

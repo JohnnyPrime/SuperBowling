@@ -71,7 +71,7 @@ app.controller('bowlController', ['$scope', function ($scope) {
         }
     };
 
-    $scope.superBowl.aFrames.length = nFrames;
+   $scope.superBowl.aFrames.length = nFrames;
     $scope.superBowl.aScore.length = nRolls;
 
 
